@@ -41,7 +41,6 @@ Result SetAdptArrayAt(PAdptArray pArr, int idx, PElement pNewElem)
             return FAIL;
         }
         memcpy(newpElemArr, pArr->pElemArr, (pArr->ArrSize) * sizeof(*pArr->pElemArr));
-        memset(newpElemArr + pArr->ArrSize, 0, (idx + 1 - pArr->ArrSize) * sizeof(*newpElemArr));
         free(pArr->pElemArr);
         pArr->pElemArr = newpElemArr;
         pArr->ArrSize = idx + 1;
