@@ -35,7 +35,6 @@ Result SetAdptArrayAt(PAdptArray pArr, int idx, PElement pNewElem)
     if (idx >= pArr->ArrSize)
     {
         // Extend Array
-
         newpElemArr = (PElement*) calloc((idx + 1), sizeof(*newpElemArr));
         if (newpElemArr == NULL) {
             return FAIL;
